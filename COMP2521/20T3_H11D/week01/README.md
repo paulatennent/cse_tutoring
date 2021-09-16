@@ -32,11 +32,6 @@
     - swap.c : Code that swaps two items in an array
 
 
-## Files
-- break_and_continue.pdf : a cheat sheet to understand break and continue
-
-
-
 ## Other resources
 - [GDB Lab](https://cgi.cse.unsw.edu.au/~cs2521/21T2/lab/11/questions)
 - [Debugging resources](https://www.cse.unsw.edu.au/~learn/debugging/)
