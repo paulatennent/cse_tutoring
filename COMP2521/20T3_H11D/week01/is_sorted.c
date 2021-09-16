@@ -1,3 +1,8 @@
+// written by Paula Tennent (2021)
+// a simple program to check if a list is sorted or not
+// COMP2521 21T3 W1 Tut (new syntax - q6)
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -16,7 +21,7 @@ int main(void) {
 
 // checks if a list is sorted of not
 bool isSorted(int *a, int n) {
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0 i < n - 1; i++) {
         if (a[i] > a[i+1]) return false;
     }
     return true;

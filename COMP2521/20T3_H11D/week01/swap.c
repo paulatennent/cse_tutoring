@@ -1,5 +1,7 @@
-#include <stdio.h>
+// written by Paula Tennent (2021)
+// a simple program that swaps two values in an array
 
+#include <stdio.h>
 
 void swap(int a[], int i, int j);
 
@@ -11,6 +13,7 @@ int main(void) {
     }
 }
 
+// a simple swap program
 void swap(int* a, int i, int j) {
     int temp = a[j];
     a[j] = a[i];
