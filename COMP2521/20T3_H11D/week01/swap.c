@@ -1,5 +1,7 @@
 // written by Paula Tennent (2021)
 // a simple program that swaps two values in an array
+// COMP2521 21T3 W1 Tut (c revision - q3)
+
 
 #include <stdio.h>
 

@@ -81,7 +81,9 @@ struct node *listDeleteRec(struct node *curr, int value) {
     }
 
     if (curr->value == value) {
-        return curr->next;
+        struct node *temp = curr->next;
+        free(curr);
+        return temp;
     }
 
     curr->next = listDeleteRec(curr->next, value);
