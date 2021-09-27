@@ -12,76 +12,107 @@
 
 // iteratively finds the length of a list
 int length1(List l) {
+
     int length = 0;
-    for (Node *curr = l; curr != NULL; curr = curr->next) {
+    Node *curr = l;
+    while (curr != NULL) {
         length++;
+        curr = curr->next;
     }
+
     return length;
 }
 
 // recursively finds the length of a list
 int length2(List l) {
+    //base case
     if (l == NULL) return 0;
-    return 1 + length2(l->next);
+
+    // recursive case
+    return 1 + length2(l->next);//rest of the list
 }
 
 // iteratively counds the number of odd numbers in a list
 int countOdds1(List l) {
-    int count = 0;
+    int sum = 0;
+
     for (Node *curr = l; curr != NULL; curr = curr->next) {
         if (curr->data % 2 == 1) {
-            count++;
+            sum++;
         }
     }
-    return count;
+
+    return sum;
 }
 
 // retursively counts the number of odd numbers in a list
 int countOdd2(List l) {
+    //base case
     if (l == NULL) return 0;
-    return (l->data % 2 == 1) ? 1 + countOdd2(l->next) : countOdd2(l->next);
+    
+    // recursive case
+    if (l->data % 2 == 1) {
+        return 1 + countOdd2(l->next);
+    } else {
+        return countOdd2(l->next);
+    }
 }
 
 // iteratively returns if a list is sorted or not
 bool isSorted1(List l) {
-    for (Node *curr = l; curr->next != NULL; curr = curr->next) {
-        if (curr->next->data < curr->data) return false;
-    }
+    
     return true;
 }
 
 // recursively returns if a list is sorted or not
 bool isSorted2(List l) {
-    if (l->next == NULL) return true;
-    return (l->data <= l->next->data);
+    // base case;
+    if (l == NULL || l->next == NULL) return true;
+
+    // recursive case;
+    // curr element is <= next element;
+
+    // If we find an occurance of it being not sorted
+    if (l->data > l->next->data) {
+        return false;
+    }
+
+    return inSorted(l->next);
 }
 
 // deletes the first occurance of value from a list
 List deleteFirst(List l, int value) {
+    // base case
     if (l == NULL) return NULL;
 
+    // 1 2 3 4, remove 1
     if (l->data == value) {
         Node *temp = l->next;
         free(l);
         return temp;
     }
-
-    l->next = deleteFirst(l->next, value);
+    // recursive case
+    l->next = deleteFirst(l->next, value); // 3 4
     return l;
 }
 
 // deletes all the even numbers from a list
 List deleteEvens(List l) {
+    // base case;
     if (l == NULL) return NULL;
 
-    if (l->data % 2 == 0) {
+    // recursive case
+    // if the current element is odd, dont remove it
+    if (l->data % 2 == 1) {
+        l->next = deleteEvens(l->next);
+        return l;
+    // if the current element is even, remove it!
+    } else {
         Node *temp = l->next;
         free(l);
         return deleteEvens(temp);
     }
 
-    l->next = deleteEvens(l->next);
-    return l;
 }
 
 
