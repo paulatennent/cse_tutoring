@@ -11,7 +11,7 @@
 - Course Email: cs2521@cse.unsw.edu.au
 
 ## Getting Marks in 2521
-- Submit your lab **ontime** -> 5pm every **Monday** (10%)
+- Submit your lab **on time** -> 5pm every **Monday** (10%)
 - Weekly Quizzes (10%)
 - Assignments (35%)
 - Exam (45%)
@@ -23,7 +23,7 @@
     - list_delete_item.c : Code to delete a certain value from a linked list (iterative and recursive)
     - sum_list.c : Code that sums up a linked list (iterative and recursive)
   - Pointers
-    - pointers.c : Code looking at how multiple varibles can point to the same piece of memory.
+    - pointers.c : Code looking at how multiple variables can point to the same piece of memory.
   - Break/Continue
     - break_and_continue.pdf : a cheat sheet to understand break and continue
   - Some other C/1511 revision :D

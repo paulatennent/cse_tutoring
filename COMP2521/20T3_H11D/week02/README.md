@@ -1,4 +1,4 @@
-# Week 2 Lab
+# Week 2 Tut
 
 ## Content
 - Recursion and Linked Lists
