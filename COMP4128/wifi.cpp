@@ -37,18 +37,19 @@ int main () {
 		while (!s.empty() && *s.begin()+K < i) s.erase(s.begin());
 		// i = 10, k = 5
 
-		// either take direct or
-		// min direct in range
-		// {6 .. }
+		// this checks the dp for a direct connection to the left
 		if (!s.empty()) {
-			int last = *s.begin() - K - 1;
+			int last = *s.begin() - K - 1; // last is what is being powered by the first router in the set
 			ll newdp = *s.begin();
 			if (last >= 0) newdp += dp[last];
 			dp[i] = min(dp[i], newdp);
 		}
 
-		// 
-		if (r[i-1]=='1') {
+        // this checks the dp for a direct connection to the right
+		// if we can have a router here, then ...
+		if (r[i-1]=='1') { 
+            // update the dp for everything within the current direct connection
+            // and the previous direct connection
 			for (int j = i-1; j >= 0; j--) {
 				if (r[j-1] == '1') break;
 				dp[j] = min(dp[j], dp[i]);

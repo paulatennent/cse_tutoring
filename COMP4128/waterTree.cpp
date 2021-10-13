@@ -28,16 +28,16 @@ using namespace std;
 #define N 500010
 
 struct Node {
-    bool value;
+    bool value; // is the a '1' in the subtree?
     bool needsProp;
 };
 
 Node nodes[N];
 
+// propogate to left and right children.
 void propogate(int i, long long l, long long r) {
     if (nodes[i].needsProp) {
-        // prop the left
-        // pro the right
+        // prop the left and right
         nodes[i * 2].value = nodes[i * 2 + 1].value = nodes[i].value;
         nodes[i * 2].needsProp = nodes[i * 2 + 1].needsProp = true;
 
@@ -48,10 +48,10 @@ void propogate(int i, long long l, long long r) {
 
 // update -> replace
 void update(int uL, int uR, bool v, int i = 1, int cLeft = 0, int cRight = N) {
-    // if we are outside of the bounds, then return false;
+    // if we are outside of the bounds, then dont update anything
     if (cLeft >= uR || cRight <= uL) return;
 
-    // are we completely inside the bounds
+    // are we completely inside the bounds, then this node represents the range we want to update
     if (cLeft >= uL && cRight <= uR) {
         nodes[i].needsProp = true;
         nodes[i].value = v;
@@ -59,20 +59,19 @@ void update(int uL, int uR, bool v, int i = 1, int cLeft = 0, int cRight = N) {
 
 
     // if we need to go further
-    // propogation
-
+    // make sure to propogate before going further!
     propogate(i, cLeft, cRight);
 
-    // recurse to the left, and then the right if necessary
     int mid = (cLeft + cRight) / 2;
 
+    // recurse to the left and to the right
     update(uL, uR, v,  i * 2, cLeft, mid);
     update(uL, uR, v,  i * 2 + 1, mid, cRight);
 
 }
 
 
-
+// query, is there a 1 in our subtree?
 bool query(int qL, int qR, int i = 1, int cLeft = 0, int cRight = N) {
     // if we are outside of the bounds, then return false;
     if (cLeft >= qR || cRight <= qL) return false;
@@ -82,24 +81,24 @@ bool query(int qL, int qR, int i = 1, int cLeft = 0, int cRight = N) {
 
 
     // if we need to go further
-    // propogation
-
+    // propogate!
     propogate(i, cLeft, cRight);
 
     // recurse to the left, and then the right if necessary
     int mid = (cLeft + cRight) / 2;
-
     if (query(qL, qR,  i * 2, cLeft, mid)) return true;
-    
     if (query(qL, qR,  i * 2 + 1, mid, cRight)) return true;
 
     return false;
 }
 
+// range[i][0] represents the start of the range
+// range[i][1] represents the end of the range
 int range[N][2];
 int upto;
 bool seen[N];
 int parent[N];
+// squashing the tree into a preorder (into range[][])
 void dfs(int curr, int par) {
     if (seen[curr]) return;
 
@@ -127,10 +126,10 @@ int main(void) {
         edges[b].push_back(a);
     }
 
-    dfs(1, -1);
     // precomputation
     // squish out tree to make it flat
     // figure out where the ranges start and end
+    dfs(1, -1);
 
     int q;
     cin >> q;
@@ -149,7 +148,7 @@ int main(void) {
             update(range[v][0], range[v][1], 0);
         
         // - Type 2 (unfill a node and its ancestors): Set the value of the node to 1
-        } else (t == 2) {
+        } else if (t == 2) {
             update(range[v][0], range[v][0] + 1);
         
         // - Type 3 (does a node have water?): Check if sum of subtree is >= 1 -> range query
