@@ -32,10 +32,10 @@ struct Node {
     bool needsProp;
 };
 
-Node nodes[N];
+Node nodes[N * 4];
 
 // propogate to left and right children.
-void propogate(int i, long long l, long long r) {
+void propogate(int i) {
     if (nodes[i].needsProp) {
         // prop the left and right
         nodes[i * 2].value = nodes[i * 2 + 1].value = nodes[i].value;
@@ -55,6 +55,7 @@ void update(int uL, int uR, bool v, int i = 1, int cLeft = 0, int cRight = N) {
     if (cLeft >= uL && cRight <= uR) {
         nodes[i].needsProp = true;
         nodes[i].value = v;
+        return;
     }
 
 
@@ -68,6 +69,10 @@ void update(int uL, int uR, bool v, int i = 1, int cLeft = 0, int cRight = N) {
     update(uL, uR, v,  i * 2, cLeft, mid);
     update(uL, uR, v,  i * 2 + 1, mid, cRight);
 
+    // forgot to add this in during class!
+    // this is similar to the recalculate function, so to check if there is a 1 in our subtree
+    // we check if there is a 1 in each of our children.
+    nodes[node].value = tree[node * 2].value || tree[node * 2 + 1].value;
 }
 
 
@@ -82,7 +87,7 @@ bool query(int qL, int qR, int i = 1, int cLeft = 0, int cRight = N) {
 
     // if we need to go further
     // propogate!
-    propogate(i, cLeft, cRight);
+    propogate(i);
 
     // recurse to the left, and then the right if necessary
     int mid = (cLeft + cRight) / 2;
@@ -104,6 +109,7 @@ void dfs(int curr, int par) {
 
     range[curr][0] = upto;
     upto++;
+    seen[curr] = true;
     parent[curr] = par;
 
     for (auto i : edges[curr]) {
@@ -130,6 +136,7 @@ int main(void) {
     // squish out tree to make it flat
     // figure out where the ranges start and end
     dfs(1, -1);
+    update(0, n+1, 1);
 
     int q;
     cin >> q;
@@ -142,14 +149,14 @@ int main(void) {
         //   If yes, set our parent to 1.
         //   Regardless, set our entire subtree to 0 (i.e. unmark everything) -> Range update
         if (t == 1) {
-            if (query(range[v][0], range[v][1])) {
-                update(range[parent[v]][0], range[parent[v]][0], 1);
+            if (query(range[v][0], range[v][1]) && parent[v] != -1) {
+                update(range[parent[v]][0], range[parent[v]][0] + 1, 1);
             }
             update(range[v][0], range[v][1], 0);
         
         // - Type 2 (unfill a node and its ancestors): Set the value of the node to 1
         } else if (t == 2) {
-            update(range[v][0], range[v][0] + 1);
+            update(range[v][0], range[v][0] + 1, 1);
         
         // - Type 3 (does a node have water?): Check if sum of subtree is >= 1 -> range query
         } else {
