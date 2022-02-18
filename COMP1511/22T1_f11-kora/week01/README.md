@@ -37,9 +37,9 @@ To compile code, we use dcc, which converts code that a human can read and type,
 
     $ dcc helloworld.c -o helloworld
 
-the "-o" is called a flag, so when using different commands there could be various flags to give the command more information.
+the "-o" is called a flag, when using different commands there could be various flags to give the command more information.
 
-For the dcc command, the "-o" flag represents "I want tell you what to name the executable file", and needs you to specify the name of the executable, which we type after the flag. So in the example above, the executable is called "helloworld".
+For the dcc command, the "-o" flag represents "I'm about to tell you what to name the executable file", and needs you to specify the name of the executable, which we type after the flag. So in the example above, the executable is called "helloworld".
 
 If you leave out the "-o", the executable will be put in a file called "a.out".
 
