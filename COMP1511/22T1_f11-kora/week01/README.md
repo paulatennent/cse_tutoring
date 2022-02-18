@@ -55,4 +55,7 @@ To run our code, we can type
 ### Class Mascot
 
 ![](https://github.com/paulatennent/cse_tutoring/blob/master/_assets/f11_kora_cat.jpg)
+
+
+### Very useful pie chart 
 ![](https://github.com/paulatennent/cse_tutoring/blob/master/_assets/favourite_plants.png)
