@@ -36,7 +36,7 @@ struct colour make_colour(int red, int green, int blue) {
 
 // returns the brightness of the colour
 double brightness(struct colour colour) {
-    return (colour.red) + (colour.green) + (colour.blue);
+    return sqrt(colour.red) + sqrt(colour.green) + sqrt(colour.blue);
 }
 
 // returns the average brightness of an arrays of colours
