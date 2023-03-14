@@ -1,3 +1,5 @@
+// written by Paula (2023)
+
 #include <stdio.h>
 #include <math.h>
 
@@ -7,6 +9,8 @@ struct colour {
     int blue;
 };
 
+int is_white(struct colour colour);
+int is_black(struct colour colour);
 struct colour make_colour(int red, int green, int blue);
 double brightness(struct colour colour);
 double average_brightness(struct colour colours[100], int size);
@@ -21,6 +25,29 @@ int main(void) {
     double average = average_brightness(colours, 2);
     printf("The average brightness is %lf\n", average);
 
+    scanf("scan in your favourite colour in rgb: ");
+    struct colour fav;
+    scanf("%d %d %d", &fav.red, &fav.green, &fav.blue);
+
+    if (is_black(fav)) {
+        printf("you are emo o.o\n");
+    }
+
+    return 0;
+}
+
+// returns true if the colour is black, false otherwise
+int is_black(struct colour colour) {
+    return colour.red == 0 && colour.green == 0 && colour.blue == 0;
+}
+
+// returns true if the colour is white, false otherwise
+// note: using a less simplified version as is_black, they do a similar thing!
+int is_white(struct colour colour) {
+    if (colour.red == 255 && colour.green == 255 && colour.blue == 255) {
+        return 1;
+    }
+    return 0;
 }
 
 // creates a new struct colour when given the three colour values
