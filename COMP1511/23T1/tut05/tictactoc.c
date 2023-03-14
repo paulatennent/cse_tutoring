@@ -1,3 +1,5 @@
+// written by Paula (2023)
+
 #include <stdio.h>
 
 #define SIZE 5
