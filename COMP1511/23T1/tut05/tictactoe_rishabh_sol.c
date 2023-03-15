@@ -1,7 +1,7 @@
 // Solution by Rishabh Alajpur (2023)
 // This program checks the column of a checkerboard
 
-// this is cool since it only uses 1 while loop (not nested while loops).
+// this is cool since it only uses 1 while loop (not nested while loops). ~paula
 
 int did_player_win(char player, char board[SIZE][SIZE]) {
   int win_counter = 0;
