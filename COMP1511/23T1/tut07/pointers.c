@@ -22,11 +22,10 @@ int main(void) {
 
     // STEP 3 -> Use dereferencing
     // a and *b are interchangable
-    *b = 5;
-    printf("a = %d\n", a);
-
+    printf("%? is the same as %?", a, *b);
     a = 6;
-    printf("a = %d\n", *b);
-
+    printf("%? is the same as %?", a, *b);
+    *b = 7;
+    printf("%? is the same as %?", a, *b);
 }
 
