@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct node {
   int value;
   struct node *next;
@@ -10,17 +9,18 @@ struct node {
 struct node *add_to_head(int value, struct node *next);
 void print_list(struct node *head);
 struct node *arr_to_list(int arr[], int length);
+struct node *remove_head(struct node *head);
 
 int main(void) {
 
-  int list[] = {1, 2, 3, 4, 5};
-  struct node *head = arr_to_list(list, 5);
+  int arr[] = {1, 2, 3, 4, 5};
+  struct node *head = arr_to_list(arr, 5);
   print_list(head);
 
   // remove the head
+  head = remove_head(head);
 
-  // print_list(heads);
-
+  print_list(head);
 
   // free the list
 
@@ -28,9 +28,15 @@ int main(void) {
 }
 
 // function to remove the head
+struct node *remove_head(struct node *head) {
+  head = head->next;
+  return head;
+}
 
 
 // function to complete free list
+
+
 
 
 /////////// helper functions ///////////
