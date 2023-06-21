@@ -32,6 +32,18 @@ void d(void) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 void e(void) {
     int i = 0;
     int keep_going = 1;
@@ -44,16 +56,12 @@ void e(void) {
     printf("%d\n", i);
 }
 
-// i == 5
-// keep going == 0
-
 void f(void) {
     int i;
     while (i > 0) {
         printf("%d\n", i);
         i--;
     }
-
 }
 
 void g(void) {
