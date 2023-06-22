@@ -47,6 +47,7 @@ char to_uppercase(char c) {
     if ('a' <= c && c <= 'z') {
         return c + ('A' - 'a');
     }
+    return c;
 }
 
 
