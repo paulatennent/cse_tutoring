@@ -64,8 +64,7 @@ int main(void) {
 }
 
 double brightness(struct colour c) {
-    //return sqrt(c.red) + sqrt(c.green) + sqrt(c.blue);
-    return 3;
+    return sqrt(c.red) + sqrt(c.green) + sqrt(c.blue);
 }
 
 double average_brightness(struct colour colours[], int length) {
