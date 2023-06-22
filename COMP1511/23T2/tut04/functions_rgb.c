@@ -49,7 +49,7 @@ int main(void) {
     // TASK 3: input in a colour, check if its an emo colour //
     ///////////////////////////////////////////////////////////
 
-    scanf("scan in your favourite colour in rgb: ");
+    printf("scan in your favourite colour in rgb: ");
     struct colour fav;
     scanf("%d %d %d", &fav.red, &fav.green, &fav.blue);
 
