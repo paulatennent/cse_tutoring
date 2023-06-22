@@ -9,6 +9,9 @@ struct colour {
     int blue;
 };
 
+double brightness(struct colour c);
+double average_brightness(struct colour colours[], int length);
+int is_black(struct colour c);
 
 int main(void) {
 
@@ -23,8 +26,8 @@ int main(void) {
     // TASK 1: Finding each colours brightnesses //
     ///////////////////////////////////////////////
 
-    double pink_brightness = sqrt(pink.red) + sqrt(pink.green) + sqrt(pink.blue);
-    double lime_brightness = sqrt(lime.red) + sqrt(lime.green) + sqrt(lime.blue);
+    double pink_brightness = brightness(pink);
+    double lime_brightness = brightness(lime);
 
 
     // printing brightness of both colours
@@ -32,22 +35,13 @@ int main(void) {
     printf("lime's brightness is %lf\n", lime_brightness);
 
 
-
-
-
-
-
     ////////////////////////////////////////////
     // TASK 2: Finding the average brightness //
     ////////////////////////////////////////////
 
-    double average = (pink_brightness + lime_brightness) / 2
+    struct colour colours[2] = {pink, lime};
+    double average = average_brightness(colours, 2);
     printf("The average brightness is %lf\n", average);
-
-
-
-
-
 
 
 
@@ -60,11 +54,29 @@ int main(void) {
     scanf("%d %d %d", &fav.red, &fav.green, &fav.blue);
 
     // if input was black
-    if (fav.red == 0 && fav.green == 0 && fav.blue == 0) {
+    if (is_black(fav)) {
         printf("you are emo o.o\n");
     } else {
-        printf("you are not emo ^w^\n")
+        printf("you are not emo ^w^\n");
     }
 
     return 0;
+}
+
+double brightness(struct colour c) {
+    return sqrt(c.red) + sqrt(c.green) + sqrt(c.blue);
+}
+
+double average_brightness(struct colour colours[], int length) {
+    double sum = 0;
+    int i = 0;
+    while (i < length) {
+        sum = brightness(colours[i]);
+        i++;
+    }
+    return sum / length;
+}
+
+int is_black(struct colour c) {
+    return c.red == 0 && c.green == 0 && c.blue == 0;
 }
