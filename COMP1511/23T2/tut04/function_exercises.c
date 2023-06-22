@@ -1,16 +1,36 @@
 // Written by Paula Tennent (2023)
 
 #include <stdio.h>
+#include <math.h>
 
 struct colour {
     int red;
     int green;
     int blue;
-}; // note, make sure to move this above the main if you want it to compile
+};
+
+
+int is_even(int num);
+char to_uppercase(char c);
+double brightness(struct colour c);
 
 int main(void) {
 
-    
+    if (is_even(4)) {
+        printf("4 is even\n");
+    } else {
+        printf("4 is odd\n");
+    }
+
+
+    char my_char = 'p';
+    my_char = to_uppercase(my_char);
+    printf("my char is %c\n", my_char);
+
+
+    struct colour pink = {255, 100, 200};
+    printf("The brightness of pink is %.2lf\n", brightness(pink));
+
     return 0;
 }
 
@@ -25,7 +45,7 @@ int is_even(int num) {
 // version of that char 
 char to_uppercase(char c) {
     if ('a' <= c && c <= 'z') {
-        return c + ('a' - 'A');
+        return c + ('A' - 'a');
     }
 }
 
@@ -35,7 +55,9 @@ char to_uppercase(char c) {
 
 // NOTE 1: the average formula is sqrt(red) + sqrt(green) + sqrt(blue)
 // NOTE 2: you have access too the double sqrt(int num); function
-
+double brightness(struct colour c) {
+    return sqrt(c.red) + sqrt(c.green) + sqrt(c.blue);
+}
 
 
 
