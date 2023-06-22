@@ -32,18 +32,6 @@ void d(void) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 void e(void) {
     int i = 0;
     int keep_going = 1;
