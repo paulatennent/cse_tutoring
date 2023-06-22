@@ -2,25 +2,41 @@
 
 #include <stdio.h>
 
-//enum ...
+enum colour {WHITE, BLACK, ORANGE};
 
-//struct ...
-
+struct pet {
+    int age;
+    enum colour fur_colour;
+    double weight;
+};
 
 int main(void) {
 
-    int josie_age = 5;
-    double josie_weight = 5.6; // kg
-    char josie_animal_type = 'c'; // 'c' is for cat!
+
+    struct pet josie = {.age = 5, .fur_colour = BLACK, .weight = 5.6};
+    struct pet coco;
+    coco.age = 3;
+    coco.fur_colour = WHITE;
+    coco.weight = 7.6;
+
+    // if josie has a birthday:
+    josie.age++;
 
 
-    printf("Josie is %d years old and weighs %.2lf kg.\n", josie_age, josie_weight);
+    // we can't print out a whole struct, we need to break it down into its parts.
+    printf("Josie's age is %d and her weight is %lf", josie.age, josie.weight);
 
-    printf("Josie is a ");
-    if (josie_animal_type == 'c') {
-        printf("cat");
+
+    // we can't print out an ENUMs value, we need to do an if-elseif instead :/
+    printf("Josies fur colour is ");
+    if (josie.fur_colour == BLACK) {
+        printf("black");
+    } else if (josie.fur_colour == WHITE) {
+        printf("white");
+    } else if (josie.fur_colour == ORANGE) {
+        printf("orange");
     }
-    printf("!\n");
+    printf(".\n");
 
     return 0;
 }
