@@ -2,17 +2,17 @@
 
 #include <stdio.h>
 
+
+
+int add_one(int num) {
+    num = num + 1;
+    return num;
+}
+
 int main(void) {
 
-    // find the average of two numbers
-    int mark1 = 60;
-    int mark2 = 70;
-
-    int final_mark = (mark1 + mark2) / 2.0;
-
-    printf("Your final mark is %d\n", final_mark);
-
-
-
+    int i = 3;
+    i = add_one(i);
+    printf("num is: %d", i);
 
 }
