@@ -2,8 +2,9 @@
 
 #include <stdio.h>
 
-void square(int *x) {
-  *x = *x * *x;
+int square(int x) {
+  x = x * x;
+ return x;
 }
 
 
@@ -14,7 +15,7 @@ int main(void) {
 
   printf("num starts as : %d\n", num);
 
-  square(&num);
+  num = square(num);
 
   printf("num after num = square(num) : %d\n", num);
 
