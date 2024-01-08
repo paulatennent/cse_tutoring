@@ -4,8 +4,9 @@
 #include <stdio.h>
 
 int main(void) {
-    
-    printf("Hello World\n");
+
+    printf("Yes\\no\n");
+    printf("I don\"t like raisins\n");
 
     return 0;
 }
