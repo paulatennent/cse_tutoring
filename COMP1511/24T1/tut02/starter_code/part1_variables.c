@@ -10,7 +10,8 @@
 
 int main(void) {
 	// 1. Declare the variables
-
+  char ans = 'z' + 10;
+	printf("%d", ans);
   // 2. Initalise the variables
 
   // 3. Print the variables
