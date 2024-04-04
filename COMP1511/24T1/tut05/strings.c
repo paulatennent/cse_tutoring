@@ -1,37 +1,46 @@
 #include <stdio.h>
+#include <string.h>
 
 #define MAX 10000
 
 int main(void) {
   // creating strings
-  char my_name[MAX] = "Paula";
-  //char my_name[] = {'P', 'a', 'u', 'l', 'a', '\0'}; // <- someone who forgot to go to lectures...
+  //char my_name[10] = {'p', 'a', 'u', 'l', 'a', '\0'};
+  char my_name[10] = "Paula";
+  //char my_name[] = "Paula"; // secertly [6]
 
-  printf("my name is %s\n", my_name);
-
-  printf("my initial is %c\n", my_name[0]);
-
-  my_name[4] = '\0'; // turning my name into Paul (aka, change the 'a' to a '\0')
-
-  printf("my name is %s.\n", my_name);
-
-  my_name[4] = 'i';
-  my_name[5] = 'n';
-  my_name[6] = 'a';
-  my_name[7] = '\0';
-
-  printf("my name is %s.\n", my_name);
+  char *my_name_forbidden = "Paola";
 
   // printing them out
+  printf("%s\n", my_name);
+  printf("%s\n", my_name_forbidden);
 
-  for (int i = 0; my_name[i] != '\0'; i++) {
-    printf("%c", my_name[i]);
-  }
-
-  // scanning them in
-  // scanf("%s", my_name); // <- WRONG! dont to this, do fgets instead :)
-  fgets(my_name, MAX , stdin);
+  // scanning in strings
+  //scanf("%s", my_name);
+  fgets(my_name, 10, stdin);
 
   // editing strings
 
+  my_name[4] = '\0'; // 'l' '\0' '\0'
+  printf("%s\n", my_name);
+
+  my_name_forbidden[4] = '\0';
+  printf("%s\n", my_name_forbidden);
+
+  printf("The length of my name is: %lu\n", my_strlen(my_name));
+
+
+  
+
+}
+
+"paula\n"
+[]
+
+int my_strlen(char *string) {
+  int i = 0;
+  while (string[i] != '\0') {
+    i++;
+  }
+  return i;
 }

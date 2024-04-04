@@ -27,6 +27,12 @@ struct celestial_body {
 int valid_player_start_pos(int row, int row);
 void print_map(struct celestial_body galaxy[SIZE][SIZE]);
 
+int valid_pos(int row, int col) {
+  return (row == 0 || row == MAX - 1 ||
+          col == 0 || col == MAX-1);
+}
+
+
 int main(void) {
     struct celestial_body galaxy[SIZE][SIZE];
 
@@ -36,40 +42,38 @@ int main(void) {
     printf("Enter the starting position of the player: ");
 
     int row;
-
     int col;
     scanf("%d %d", &row, &col);
 
-    // while its INCORRECT
+    // loop unitll its correct.....
+    // on the outskirts of the 2D array
+    // !(valid)
+    //while (row > 0 && row < MAX )
+    //while (row != 0 && row != MAX - 1)
 
-    // try and write the condition for VALID
-    // negate it to get INVALID
+    while (row == 0 || row == MAX - 1 ||
+           col == 0 || col == MAX-1)
 
-    while (!valid_player_start_pos(row, col)) {
-
-      printf("invalid position, try again!");
+    while (!(valid_pos(..., ...))) {
+      printf("invald positioN!");
       scanf("%d %d", &row, &col);
-
     }
 
-    // here we know that valid_player_start_pos(row, col) must be TRUE! so we
-    // can continue coding with this assumption :D
-    
+    // we know that row and col is a valid position
+
+
+    galaxy[row][col];
 
     // TODO: Place the planets and nebulae in the galaxy
     printf("How many planets and nebulae are there? ");
 
     // TODO: Place the planets and nebulae in the galaxy
     printf("Enter the position and points of the planet(s) and nebula(e): ");
-    
+
     // TODO: Place the stars in the galaxy
     printf("Enter the position and points of the star(s): \n");
 
     // TODO: Print the map
-}
-
-int valid_player_start_pos(int row, int row) {
-  return row == 0 || row == MAX-1 || col == 0 || col == MAX-1;
 }
 
 // Function prints the map of the galaxy

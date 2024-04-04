@@ -18,15 +18,27 @@ void delete_following_words(char *string);
 // 1.
 // returns the number of lowercase letters in `char *string`
 int count_lowercase(char *string) {
-  // TODO
-  return 42;
+  int n_lower;
+  int i = 0;
+  while (string[i] != '\0') {
+    if (islower(string[i])) {
+      n_lower++;
+    }
+    i++;
+  }
+  return n_lower;
 }
 
 // 2.
 // modifies `char *string` by converting all its vowels to uppercase
 void make_vowels_uppercase(char *string) {
-  // TODO
-  return;s
+  int i = 0;
+  while (string[i] != '\0') {
+    if (isvowel(string[i])) {
+      string[i] = toupper(string[i]);
+    }
+    i++;
+  }
 }
 
 
@@ -37,6 +49,9 @@ void make_vowels_uppercase(char *string) {
 // 
 // (hint. what defines when a string ends?)
 void delete_following_words(char *string) {
-  // TODO
-  return;
+  int i = 0;
+  while (string[i] != '\0' || string[i] != ' ') {
+    i++;
+  }
+  string[i] = '\0';
 }
