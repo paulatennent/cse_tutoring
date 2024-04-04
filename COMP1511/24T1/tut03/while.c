@@ -12,7 +12,7 @@ void b(void) {
     int i = 1;
     while (i < 32) {
         printf("%d\n", i);
-        i = i + i; //i = 4
+        i = i + i; 
     }
 }
 
@@ -20,7 +20,7 @@ void c(void) {
     int i = 0;
     while (i < 32) {
         printf("%d\n", i);
-        i = i + 2;
+        i = i + 2; 
     }
 }
 
@@ -47,10 +47,10 @@ void e(void) {
 void f(void) {
     int i;
     printf("%d", i);
-    //while (i > 0) {
-    //    printf("%d\n", i);
-    //    i--;
-    //}
+    while (i > 0) {
+        //printf("%d\n", i);
+        i--;
+    }
 }
 
 void g(void) {
