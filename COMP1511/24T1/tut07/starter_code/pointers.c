@@ -1,30 +1,32 @@
 #include <stdio.h>
 
-void halve_values(int num_1, int num_2, int num_3);
 
 int main(void) {
-    int num_1 = 4;
-    int num_2 = 10;
-    int num_3 = 16;
 
-    printf("Values before halved:\n");
-    printf("Num 1: %d\n", num_1);
-    printf("Num 2: %d\n", num_2);
-    printf("Num 3: %d\n", num_3);
+  int a = 5;
 
-    halve_values(num_1, num_2, num_3);
+  // what is the type? int
+  // what is the variable name? a
+  // what is the value? 5
 
-    printf("Values after halved:\n");
-    printf("Num 1: %d\n", num_1);
-    printf("Num 2: %d\n", num_2);
-    printf("Num 3: %d\n", num_3);
+  printf("the value of a is: %d\n", a);
+  printf("the address of a is: %p\n", &a);
 
-    return 0;
+  int *b;
+
+
+  // type : int *
+  // name: b
+  // valye: 0x6264727f6w5d
+
+
+  printf("the value of b is: %p\n", b);
+  printf("the address of b is: %p\n", &b);
+
+
+  printf("the value of a is: %d\n", *b);
+
+
+
+  return 0;
 }
-
-void halve_values(int num_1, int num_2, int num_3) {
-    num_1 = num_1 / 2;
-    num_2 = num_2 / 2;
-    num_3 = num_3 / 2;
-}
-
