@@ -76,9 +76,19 @@ int list_length(struct node *head) {
 
 struct node *remove_tail(struct node *head) {
 
-  struct node *curr = head; // int i = 0
+  if (head == NULL) {
+    return head;
+  }
+
+  if (head->next == NULL) {
+    free(head);
+    head = NULL;
+    return head;
+  }
+
+  struct node *curr = head;
   while (curr->next->next != NULL) {
-    curr = curr->next; // i++:
+    curr = curr->next;
   }
 
   free(curr->next);
@@ -87,9 +97,18 @@ struct node *remove_tail(struct node *head) {
   return head;
 }
 
-// words for a list of size 4 DONE!
-// does it work for a list bigger?
-// does it work for a list of size 3?
-// size 2
-// size 1
-// size 0
+
+void free_list(struct node *head) {
+  struct node *current = head;
+  while (current != NULL) {
+
+    struct node *temp = current; // top slice
+
+    current = current->next; // meat of our sandwich
+
+    free(temp); // bottom slice
+
+  }
+}
+
+// sandwich freeing method

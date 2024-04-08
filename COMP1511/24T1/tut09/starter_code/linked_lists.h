@@ -64,3 +64,6 @@ int list_length(struct node *head);
 // Returns:
 //      A pointer to the head of the linked list
 struct node *remove_tail(struct node *head);
+
+// frees the whole list :)
+void free_list(struct node *head);
