@@ -75,6 +75,50 @@ int list_length(struct node *head) {
 }
 
 struct node *remove_tail(struct node *head) {
-    // TODO: implement function
-    exit(1);
+
+  if (head == NULL) {
+    retrun NULL;
+  }
+
+  if (head->next == NULL) {
+    free(head);
+    return NULL;
+  }
+
+  // find the second last item
+  struct node *curr;
+
+  // get curr to the end of the list (second lst)
+  while (curr->next->next != NULL) {
+    curr = curr->next;
+  }
+  // whats true here: (curr->next->next == NULL)
+
+  // curr is the second last item :))))
+
+  // set its next value to null;
+  free(curr->next);
+  curr->next = NULL
+
+
+  return head;
 }
+
+
+void free_list(struct node *head) {
+  struct node *current = head;
+  while (current != NULL) {
+
+    // top slice
+    struct node *to_delete = current;
+
+    // code (aka meat)
+    current = current->next;
+
+    // bottom slice
+    free(to_delete);
+  }
+}
+
+// sandwich
+
