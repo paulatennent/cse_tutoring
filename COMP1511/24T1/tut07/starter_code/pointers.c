@@ -8,6 +8,7 @@ int main(void) {
   // what is the type? int
   // what is the variable name? a
   // what is the value? 5
+  // what is the address? &a -> 0x26fa51
 
   printf("the value of a is: %d\n", a);
   printf("the address of a is: %p\n", &a);

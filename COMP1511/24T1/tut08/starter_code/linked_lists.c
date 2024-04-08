@@ -7,16 +7,26 @@
 
 #include "linked_lists.h"
 
+// easiest
 struct node *create_node(int data) {
-    // TODO
-    exit(1);
+  struct node *new_node = malloc(sizeof(node));
+  new_node->data = data;
+  new_node->next = NULL;
 }
 
+// medium
 struct node *insert_head(struct node *head, int data) {
-    // TODO
-    exit(1);
+  struct node *new_node = malloc(sizeof(node));
+  new_node->val = data;
+
+  new_node->next = head;
+  head = new_node;
+
+
+  return head;
 }
 
+// hardest
 struct node *insert_tail(struct node *head, int data) {
     // TODO
     exit(1);
@@ -35,6 +45,7 @@ void print_list(struct node *head) {
     printf("X\n");
 }
 
+// list length
 int list_length(struct node *head) {
     // TODO
     exit(1);
