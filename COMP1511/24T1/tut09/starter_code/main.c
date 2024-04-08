@@ -32,13 +32,13 @@ int main(void) {
     printf("There are %d nodes in the list\n", length);
     
     // Remove the last node from the linked list
-    head = remove_tail(head);
+    //head = remove_tail(head);
 
     // Print the linked list
     print_list(head);
 
     // Calculate and print the length of the linked list
-    int length = list_length(head);
+    length = list_length(head);
     printf("There are %d nodes in the list\n", length);
 
     return 0;
