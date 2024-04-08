@@ -76,49 +76,20 @@ int list_length(struct node *head) {
 
 struct node *remove_tail(struct node *head) {
 
-  if (head == NULL) {
-    retrun NULL;
-  }
-
-  if (head->next == NULL) {
-    free(head);
-    return NULL;
-  }
-
-  // find the second last item
-  struct node *curr;
-
-  // get curr to the end of the list (second lst)
+  struct node *curr = head; // int i = 0
   while (curr->next->next != NULL) {
-    curr = curr->next;
+    curr = curr->next; // i++:
   }
-  // whats true here: (curr->next->next == NULL)
 
-  // curr is the second last item :))))
-
-  // set its next value to null;
   free(curr->next);
-  curr->next = NULL
-
+  curr->next = NULL;
 
   return head;
 }
 
-
-void free_list(struct node *head) {
-  struct node *current = head;
-  while (current != NULL) {
-
-    // top slice
-    struct node *to_delete = current;
-
-    // code (aka meat)
-    current = current->next;
-
-    // bottom slice
-    free(to_delete);
-  }
-}
-
-// sandwich
-
+// words for a list of size 4 DONE!
+// does it work for a list bigger?
+// does it work for a list of size 3?
+// size 2
+// size 1
+// size 0
