@@ -30,7 +30,7 @@ int main(void) {
     // Calculate and print the length of the linked list
     int length = list_length(head);
     printf("There are %d nodes in the list\n", length);
-    
+
     // Remove the last node from the linked list
     head = remove_tail(head);
 
@@ -40,6 +40,8 @@ int main(void) {
     // Calculate and print the length of the linked list
     length = list_length(head);
     printf("There are %d nodes in the list\n", length);
+
+    free_list(head);
 
     return 0;
 }
