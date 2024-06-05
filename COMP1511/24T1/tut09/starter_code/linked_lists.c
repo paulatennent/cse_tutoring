@@ -8,7 +8,7 @@
 #include "linked_lists.h"
 
 struct node *create_node(int data) {
-    struct node *new_node = malloc(sizeof(struct node));
+  struct node *new_node = malloc(sizeof(struct node));
     new_node->data = data;
     new_node->next = NULL;
 
@@ -75,7 +75,7 @@ int list_length(struct node *head) {
 }
 
 struct node *remove_tail(struct node *head) {
-
+  // list is empty
   if (head == NULL) {
     return head;
   }
@@ -86,11 +86,14 @@ struct node *remove_tail(struct node *head) {
     return head;
   }
 
+  // list is 1 long
+
   struct node *curr = head;
   while (curr->next->next != NULL) {
     curr = curr->next;
   }
 
+  //the value after curr is now NULL
   free(curr->next);
   curr->next = NULL;
 
@@ -99,16 +102,14 @@ struct node *remove_tail(struct node *head) {
 
 
 void free_list(struct node *head) {
-  struct node *current = head;
-  while (current != NULL) {
-
-    struct node *temp = current; // top slice
-
-    current = current->next; // meat of our sandwich
-
-    free(temp); // bottom slice
-
+  struct node *c = head;
+  while (c != NULL) {
+    struct node *delete = c;
+    c = c->next;
+    free(delete);
   }
 }
 
-// sandwich freeing method
+// top: creating a temp label for what we are deleting
+// meat: regular code
+// bottom: delete it
