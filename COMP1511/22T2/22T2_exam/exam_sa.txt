@@ -1,0 +1,109 @@
+[COMP1511 Final Exam]
+You should edit the empty space between the curly braces.
+You should not edit anything else in this file.
+
+You can test this file conforms to the correct syntax with "1511 autotest-exam exam_sa"
+
+You should submit this file with the command "give cs1511 exam_sa exam_sa.txt"
+
+If you need a new copy of the file, move this file to a safe place,
+then run "1511 fetch-exam".
+
+q1: What does this program print? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q1]{{{ B }}}
+
+
+q2: What does this program print? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q2]{{{ c not recognised. }}}
+
+
+q3: Which input would cause the function not to print anything? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q3]{{{ E }}}
+
+
+q4: Which would be a correct way to define the array? (see the exam paper for details)
+Enter your answer as some of A, B, C or D inside the curly brackets (extra spaces are ignored)
+[q4]{{{ A }}}
+
+
+q5: Which variable names will compile without errors? (see the exam paper for details)
+Enter your answer as some of A, B, C, D and E inside the curly brackets (extra spaces are ignored)
+[q5]{{{ ABD }}}
+
+
+q6: What code should replace [SECRET]? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q6]{{{ char *a, char *b }}}
+
+
+q7: What code should replace [SECRET] (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q7]{{{ my_number <= 8 }}}
+
+
+q8:  (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q8]{{{ CD }}}
+
+
+q9: What code should replace [SECRET]? (see the exam paper for details)
+Enter your answer integers, separated by commas inside the curly brackets (extra spaces are ignored)
+[q9]{{{ 4, 1, -2, -2, 0 }}}
+
+
+q10: Which of the code fragments would set my_value to 42. (see the exam paper for details)
+Enter your answer as one of A, B, C or D inside the curly brackets (extra spaces are ignored)
+[q10]{{{ C }}}
+
+
+q11: Which of the following would insert a node called new_node after a node called current? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q11]{{{ B }}}
+
+
+q12: Which Code Style issues are present in this code? (see the exam paper for details)
+Enter your answer as some of A, B, C, D and E inside the curly brackets (extra spaces are ignored)
+[q12]{{{ ACDE }}}
+
+
+q13: What node does secret point to after the code is run? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q13]{{{ D }}}
+
+
+q14: What output will the function produce? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q14]{{{ (0, 1) }}}
+
+
+q15: Which struct best stores the information described? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q15]{{{ D }}}
+
+
+q16: Which cases will not produce a correct result? (see the exam paper for details)
+Enter your answer as some of A, B, C and D inside the curly brackets (extra spaces are ignored)
+[q16]{{{ BD }}}
+
+
+q17: Which line does the program first lose access to a piece of malloced memory? (see the exam paper for details)
+Enter your answer as a number inside the curly brackets (extra spaces are ignored)
+[q17]{{{ 16 }}}
+
+
+q18: Which of the following statements do you know is true? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q18]{{{ C }}}
+
+
+q19: Which of the following are features of linked lists? (see the exam paper for details)
+Enter your answer as some of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q19]{{{ CD }}}
+
+
+q20: Which of the linked lists will produce an incorrect output? (see the exam paper for details)
+Enter your answer as one of A, B, C, D, or E inside the curly brackets (extra spaces are ignored)
+[q20]{{{ D }}}

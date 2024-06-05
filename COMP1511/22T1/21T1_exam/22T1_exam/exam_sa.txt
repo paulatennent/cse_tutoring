@@ -1,0 +1,109 @@
+[COMP1511 Final Exam]
+You should edit the empty space between the curly braces.
+You should not edit anything else in this file.
+
+You can test this file conforms to the correct syntax with "1511 autotest-exam exam_sa"
+
+You should submit this file with the command "give cs1511 exam_sa exam_sa.txt"
+
+If you need a new copy of the file, move this file to a safe place,
+then run "1511 fetch-exam".
+
+q1: What does this program print? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q1]{{{ F }}}
+
+
+q2: What does this program print? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q2]{{{ (1, -1) is top-right. }}}
+
+
+q3: Which input would cause the function not to print anything? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q3]{{{ E }}}
+
+
+q4: What four values does counter have in this code? (see the exam paper for details)
+Enter your answer as four integers seperated by spaces inside the curly brackets (extra spaces are ignored)
+[q4]{{{ 0 1 3 5 }}}
+
+
+q5: Which function correctly prints the input shown in the paper? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q5]{{{ BD }}}
+
+
+q6: What code should replace [SECRET]? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q6]{{{ int *a, int *b }}}
+
+
+q7: On which line does a compiler error first occur. (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q7]{{{ 9 }}}
+
+
+q8: What lines could use the `SIZE` hash-define? (see the exam paper for details)
+Enter your answer line numbers, seperated by spaces inside the curly brackets (extra spaces are ignored)
+[q8]{{{ 8 15 20 }}}
+
+
+q9: What code should replace [SECRET]? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q9]{{{ 3, 2, -1, 2, 0 }}}
+
+
+q10: Which of the code fragments would set my_value to 42. (see the exam paper for details)
+Enter your answer as one of A, B, C or D inside the curly brackets (extra spaces are ignored)
+[q10]{{{ D }}}
+
+
+q11: Which of A, B, C, D or E are longest (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q11]{{{ c }}}
+
+
+q12: Which Code Style issues are present in this code? (see the exam paper for details)
+Enter your answer as some of A, B, C, D and E inside the curly brackets (extra spaces are ignored)
+[q12]{{{ ACDE }}}
+
+
+q13: What does `secret` point to? (see the exam paper for details)
+Enter your answer as one of A, B, C, or D inside the curly brackets (extra spaces are ignored)
+[q13]{{{ B }}}
+
+
+q14: What code should replace [SECRET]? (see the exam paper for details)
+Enter your answer inside the curly brackets (extra spaces are ignored)
+[q14]{{{ current->followed_by->driver, current->driver }}}
+
+
+q15: Which struct best stores the information described? (see the exam paper for details)
+Enter your answer as one of A, B, C, D or E inside the curly brackets (extra spaces are ignored)
+[q15]{{{ A }}}
+
+
+q16: Which cases will not produce a correct result? (see the exam paper for details)
+Enter your answer as some of A, B, C and D inside the curly brackets (extra spaces are ignored)
+[q16]{{{ AC }}}
+
+
+q17: Which line does the program first lose access to a piece of malloced memory? (see the exam paper for details)
+Enter your answer as a number inside the curly brackets (extra spaces are ignored)
+[q17]{{{ 15 }}}
+
+
+q18: Which of the linked lists creates an error? (see the exam paper for details)
+Enter your answer as one of A, B, C, D, and E inside the curly brackets (extra spaces are ignored)
+[q18]{{{ A }}}
+
+
+q19: Which of these operations would allow you to implement a stack? (see the exam paper for details)
+Enter your answer as one of A, B, C or D inside the curly brackets (extra spaces are ignored)
+[q19]{{{ D }}}
+
+
+q20: How would you get DCC to compile these files into a program called `program` (see the exam paper for details)
+Enter your answer as a terminal command. inside the curly brackets (extra spaces are ignored)
+[q20]{{{ dcc -o program main.c student.c tutor.c }}}

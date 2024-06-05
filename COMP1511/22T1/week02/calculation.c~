@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+
+    int calc = 1 + 2;
+    printf("My favourite letter is : %d, %d \n", calc, calc);
+    
+    return 0;
+}
+
+/*
+1 / 2 * 500
+1 / 2.0 * 500
+17
+(-5) % 6 - 4
+'A' + 5 (Assume we treat this as a char)
+'A' + 32 (Assume we treat this as a char)
+*/

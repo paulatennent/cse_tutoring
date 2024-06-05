@@ -113,3 +113,4 @@ void free_list(struct node *head) {
 // top: creating a temp label for what we are deleting
 // meat: regular code
 // bottom: delete it
+  // TODO

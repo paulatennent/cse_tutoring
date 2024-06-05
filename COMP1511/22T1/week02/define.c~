@@ -1,0 +1,21 @@
+#define MEANING_OF_LIFE 42
+
+int main(void) {
+
+    int calc = 1 * 2;
+    printf("%c \n", int);
+    
+    char calc = 1 * 2;
+    printf("%c \n", calc);
+    
+    return 0;
+}
+
+/*
+1 / 2 * 500
+1 / 2.0 * 500
+(17 / 5) * 5 + (17 % 5)
+(12 - 17) % 6 - 4
+'A' + 5 (Assume we treat this as a char)
+'A' + 32 (Assume we treat this as a char)
+*/
