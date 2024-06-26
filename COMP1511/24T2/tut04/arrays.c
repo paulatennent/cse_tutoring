@@ -1,14 +1,42 @@
 #include <stdio.h>
 
-int main(void) {
-  
-  // create an array with 5 elements
+#define LENGTH 5
 
-  // print it out
+int main(void) {
+
+    int my_array[LENGTH] = {1, 3, 6, -2, 3};
+
+    // remove all negatives
   
-  // add 1 to each even element
+    int i = 0;
+    while (i < LENGTH) {
+        if (my_array[i] < 0) {
+            my_array[i] = -my_array[i];
+        }
+        i++;
+    }
+
+    // print the my_array
+    
+    i = 0;
+    while (i < LENGTH) {
+        printf("%d ", my_array[i]);
+        i++;
+    }
+    printf("\n");
+
+    // find the largest element
+    
+    int largest = my_array[0];
+    i = 0;
+    while (i < LENGTH) {
+        if (my_array[i] > largest) {
+            largest = my_array[i];
+        }
+        i++;
+    }
+
+    printf("The largest element is: %d\n", largest);
   
-  // print it out again
-  
-  return 0;
+    return 0;
 }
