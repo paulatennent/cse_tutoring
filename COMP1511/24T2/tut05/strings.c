@@ -3,7 +3,6 @@
 int main(void) {
 
     // create a string
-
     char my_name[] = "Paula";
     char my_name2[100] = "Paula";
     char my_name3[] = {'P', 'a', 'u', 'l', 'a', '\0'};

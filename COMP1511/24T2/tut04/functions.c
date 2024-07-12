@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 void print_smiley(void);
 int add_one(int number);
 int sum(int n1, int n2);
@@ -45,3 +46,4 @@ int sum(int n1, int n2) {
 int is_even(int number) {
   return number % 2 == 0;
 }
+>>>>>>> edd371187c712fe6491227181192c8ee6a1fd760

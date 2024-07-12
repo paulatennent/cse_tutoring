@@ -34,17 +34,7 @@ void print_map(struct celestial_body galaxy[SIZE][SIZE]);
 int main(void) {
     struct celestial_body galaxy[SIZE][SIZE];
 
-    // TODO: Initialize the galaxy
 
-    // TODO: Place the planets and nebulae in the galaxy
-
-    // TODO: Place the player in the galaxy
-
-    // TODO: Find the total points
-
-    // TODO: Find the total points for a square radius around the player
-    // e.g. nearby_points(galaxy, p_row, p_col, 3) // for 3 radius around the
-    // player
     
     return 0;
 }

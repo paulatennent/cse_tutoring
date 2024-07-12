@@ -7,11 +7,10 @@ void a(void) {
     while (row < SIZE) {
         int col = 0;
         while (col < SIZE) {
-            if (col != 1 && col != 1) {
-                printf("0");
-            } else {
+            if (row == 1 || col == 1) {
                 printf("X");
-
+            } else {
+                printf("0");
             }
             col++;
         }

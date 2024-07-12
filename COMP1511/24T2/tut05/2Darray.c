@@ -1,18 +1,20 @@
 #include <stdio.h>
 
+
 int main(void) {
     
-    // createa a 2D array
+    // create an array
     
-    // set it all to be 1
-    
-    // add some other items... :/
 
-    // square everything in the array (with a function...)
 
-    // print it out (also with a function)
+    // print it out
     
-    // change it over to a 
+
+    // square every element
+    
+
+    // print it out again
+
 
     return 0;
 }

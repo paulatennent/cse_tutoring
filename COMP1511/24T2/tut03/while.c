@@ -32,7 +32,7 @@ void d(void) {
     int i;
     printf("%d", i);
     while (i > 0) {
-        printf("%d\n", i);
+        //printf("%d\n", i);
         i--;
     }
 }
@@ -42,7 +42,7 @@ void e(void) {
     int max = 32;
     while (i < max) {
         printf("%d\n", i);
-        max = max * max;
+        max = max * 2;
     }
 }
 

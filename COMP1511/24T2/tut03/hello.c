@@ -6,22 +6,36 @@ int main(void) {
   printf("Enter the number of 'l's: ");
   scanf("%d", &num_l);
 
-  // print out hello with that number of ls
-  printf("Hello\n");
+  int num_hello;
+  printf("Enter the number of hellos" );
+  scanf("%d", &num_hello);
+
+
+  int i = 0;
+  while (i < num_hello) {
+
+
+    printf("");
+
+    int j = 0;
+    while (j < num_l) {
+
+      if (i == j) {
+        printf("*");
+      } else {
+        printf("_");
+      }
 
 
 
+      j++;
+    }
 
+    printf("\n");
 
+    i++;
+  }
 
-
-  /// PART 2 ////
-
-  // int num_hello;
-  // printf("Enter the number of hellos" );
-  // scanf("%d", &num_hello);
-
-  // print out that many hellos
 
 
   return 0;
