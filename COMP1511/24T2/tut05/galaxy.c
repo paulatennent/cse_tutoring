@@ -24,6 +24,11 @@ struct celestial_body {
     int points;
 };
 
+struct position {
+    int row;
+    int col;
+};
+
 void print_map(struct celestial_body galaxy[SIZE][SIZE]);
 
 int main(void) {
@@ -32,16 +37,15 @@ int main(void) {
     // TODO: Initialize the galaxy
 
     // TODO: Place the planets and nebulae in the galaxy
-    printf("Enter planets and nebulae:\n");
 
     // TODO: Place the player in the galaxy
-    printf("Enter the starting position of the player: ");
 
-    // TODO: Place the stars in the galaxy
-    printf("Enter the position and points of the star(s):\n");
+    // TODO: Find the total points
 
-    // TODO: Print the map
-
+    // TODO: Find the total points for a square radius around the player
+    // e.g. nearby_points(galaxy, p_row, p_col, 3) // for 3 radius around the
+    // player
+    
     return 0;
 }
 
